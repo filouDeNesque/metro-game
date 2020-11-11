@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <header>
+        <h1>40" - Le métro</h1>
+    </header>
+    <div class="container">
+        <div class="btn-box" id="btn-box" onclick="showenu()">
+            <div id="btn-menu">
+
+            </div>
+        </div>
+        <div id="menu-bar">
+            <ul>
+                <li>Menu</li>
+                <li>Indice</li>
+                <li>Info</li>
+                <li>Reglage</li>
+            </ul>
+        </div>
+
+        <canvas id="canvas" width="2000" height="2000"></canvas>
+
+        <div class="action-box" id="action-box">
+            <h2>Action box</h2>
+            <div class="perso-box">
+                <h5>Didoune</h5>
+                <img src="./assets/santa.png" alt="">
+            </div>
+            <div class="perso-box">
+                <h5>
+                    Irami
+                </h5>
+                <img src="./assets/boy2.png">
+                <audio controls src="https://media1.vocaroo.com/mp3/1cjhQ7ptfR7c">
+                    <p>Votre navigateur ne prend pas en charge l'audio HTML. Voici un lien pour le télécharger.</p>
+                </audio>
+            </div>
+            <div class="perso-box">
+                <h6>
+                    test 3
+                </h6>
+                <img src="./assets/girl.png" alt="">
+            </div>
+        </div>
+
+    </div>
+    <script type="application/javascript">
+        let visible = false
+        function showenu() {
+            let menuBar = document.getElementById('menu-bar')
+            let menuIcon = document.getElementById('btn-box')
+            if (visible == true) {
+                menuBar.style.visibility = "hidden"
+                menuIcon.className = 'btn-box'
+                visible = false
+            } else {
+                menuBar.style.visibility = "visible"
+                menuIcon.className = 'btn-box btn-close-box'
+                visible = true
+            }
+
+        }
+    </script>
+    <script type="module" src="main.js"></script>
+</body>
+
+</html>

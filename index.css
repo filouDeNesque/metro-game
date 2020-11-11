@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Trispace&display=swap');
+body {
+    margin: 0;
+}
+
+h1 {
+    font-family: 'Monoton', cursive;
+    color: white;
+}
+
+header {
+    position: fixed;
+    left: 59%;
+    top: -8px;
+    transform: translateX(-50%);
+    letter-spacing: 1px;
+    animation: glow 5s infinite alternate;
+    width: fit-content;
+}
+
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 3px #82d2e2;
+    }
+    30% {
+        text-shadow: 0 0 6px #be3089;
+    }
+    60% {
+        text-shadow: 0 0 8px #ec8d45;
+    }
+    100% {
+        text-shadow: 0 0 10px #418b53;
+    }
+}
+
+.container {
+    width: 100%;
+    background: #1d1e22;
+    overflow: scroll;
+}
+
+.container::-webkit-scrollbar {
+    display: none;
+    /* Hide scrollbar for IE, Edge and Firefox */
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+#canvas {
+    border-radius: 10px;
+    /* background:url("https://www.plandeparis.info/plans-de-metro/plan-de-metro-bonne-definition.gif"); */
+    background-size: cover;
+    background-position: center;
+    filter: drop-shadow(58px -3px 11px);
+}
+
+#btn-menu {
+    top: 4vh;
+    left: 5vw;
+    width: 40px;
+    height: 4px;
+    position: fixed;
+    background: white;
+    border-radius: 2px;
+    box-shadow: 0 0 3px;
+}
+
+#btn-menu::before {
+    content: "";
+    position: fixed;
+    width: 40px;
+    height: 4px;
+    background: white;
+    top: 2vh;
+    border-radius: 2px;
+    box-shadow: 0 0 3px;
+}
+
+#btn-menu::after {
+    content: "";
+    position: fixed;
+    width: 40px;
+    height: 4px;
+    background: white;
+    top: 6vh;
+    border-radius: 2px;
+    box-shadow: 0 0 3px;
+}
+
+.btn-box {
+    width: 69px;
+    height: 53px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    cursor: pointer;
+    filter: drop-shadow(19px -8px 8px);
+}
+
+.btn-box:hover #btn-menu {
+    /* background: #82d2e2; */
+    box-shadow: 0 0 3px #82d2e2;
+}
+
+.btn-box:hover #btn-menu::after {
+    /* background: #82d2e2; */
+    box-shadow: 0 0 3px #82d2e2;
+}
+
+.btn-box:hover #btn-menu::before {
+    /* background: #82d2e2; */
+    box-shadow: 0 0 3px #82d2e2;
+}
+
+.btn-close-box #btn-menu {
+    top: 4vh;
+    animation: animOpen 5s infinite alternate;
+}
+
+@keyframes animOpen {
+    0% {
+        transform: rotate(0);
+        box-shadow: 0 0 3px #82d2e2;
+    }
+    100% {
+        transform: rotate(45deg);
+        box-shadow: 0 0 54px #82d2e2;
+    }
+}
+
+.btn-close-box #btn-menu::before {
+    transform: rotate(82deg);
+    top: 1vh;
+    left: -1vh;
+}
+
+.btn-close-box #btn-menu::after {
+    transform: rotate(-98deg);
+    top: 2vh;
+    left: 1vh;
+}
+
+#menu-bar {
+    visibility: hidden;
+    font-family: 'Monoton', cursive;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 36vh;
+    border-radius: 0 0 10px 0;
+    z-index: 1;
+    background: #1d1e22;
+    box-shadow: 0 0 14px #f5f6f8f0;
+    padding: 16px;
+}
+
+#menu-bar ul {
+    margin-top: 8vh;
+    list-style: none;
+    padding: 20px;
+    letter-spacing: 2px;
+}
+
+#menu-bar li {
+    cursor: pointer;
+    margin-top: 10px;
+    border-bottom: solid transparent 2px;
+}
+
+#menu-bar li:hover {
+    text-shadow: #FC0 1px 0 10px;
+    scale: 2, 2;
+}
+
+.action-box {
+    visibility: hidden;
+    position: absolute;
+    border-radius: 10px;
+    padding: 20px;
+    font-family: 'Trispace', sans-serif;
+    color: #1d1e22;
+    background: #ffffffa3;
+    transform: translateX(-177px);
+    min-width: 295px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.action-box h2 {
+    margin-top: 0;
+    width: 100%;
+}
+
+.action-box audio {
+    margin-top: 20px;
+}
+
+.action-box div {
+    width: 100%;
+}
+
+.action-box img{
+    width: 200px;
+}
+
+.action-box h5{
+    
+}
+
+.perso-box {
+    border-bottom: solid black 2px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
