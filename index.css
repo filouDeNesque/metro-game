@@ -217,7 +217,11 @@ header {
 }
 
 .action-box h5{
-    
+    color: #edb134;
+    font-size: 25px;
+    margin: 0;
+    background: white;
+    border-radius: 5px;
 }
 
 .perso-box {
