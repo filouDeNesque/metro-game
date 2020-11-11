@@ -185,14 +185,20 @@ header {
     font-family: 'Trispace', sans-serif;
     color: #1d1e22;
     background: #ffffffa3;
-    transform: translateX(-177px);
+    transform: translateX(-50%);
     display: flex;
     flex-wrap: wrap;
+    max-width: 220px;
 }
 
 .action-box h2 {
     margin-top: 0;
     width: 100%;
+}
+
+#audio-container{
+    display: flex;
+    flex-direction: column;
 }
 
 .action-box audio {
